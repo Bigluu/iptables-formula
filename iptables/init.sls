@@ -7,6 +7,7 @@
   {% set packages = salt['grains.filter_by']({
     'Debian': ['iptables', 'iptables-persistent'],
     'RedHat': ['iptables'],
+    'Arch': ['iptables'],
     'default': 'Debian'}) %}
 
     {%- if install %}
